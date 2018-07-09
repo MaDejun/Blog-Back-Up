@@ -5,18 +5,20 @@
   
   <title>Java 集合 | MaDejun</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;nbsp;&amp;nbsp;    Java中的集合是为了解决存储不同类型值，虽然数组也可以用来存储，但是存储值的类型单一。所以为了保存一些数目不确定，类型任意，且长度可变的对象，JDK提供了这样的类，所有这样的类的统称————集合。 集合可分为两大类，一类是单列集合Collection，另一类是双列集合Map。  Colletion Collection接口是集合类的根接口，Java中没有提供这个接">
+  <meta name="description" content="&amp;nbsp;&amp;nbsp;    Java中的集合是为了解决存储不同类型值，虽然数组也可以用来存储，但是存储值的类型单一。所以为了保存一些数目不确定，类型任意，且长度可变的对象，JDK提供了这样的类，所有这样的类的统称————集合。 集合可分为两大类，一类是单列集合Collection，另一类是双列集合Map。">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java 集合">
 <meta property="og:url" content="https://www.madejun.top/2018/07/08/Java集合/index.html">
 <meta property="og:site_name" content="MaDejun">
-<meta property="og:description" content="&amp;nbsp;&amp;nbsp;    Java中的集合是为了解决存储不同类型值，虽然数组也可以用来存储，但是存储值的类型单一。所以为了保存一些数目不确定，类型任意，且长度可变的对象，JDK提供了这样的类，所有这样的类的统称————集合。 集合可分为两大类，一类是单列集合Collection，另一类是双列集合Map。  Colletion Collection接口是集合类的根接口，Java中没有提供这个接">
+<meta property="og:description" content="&amp;nbsp;&amp;nbsp;    Java中的集合是为了解决存储不同类型值，虽然数组也可以用来存储，但是存储值的类型单一。所以为了保存一些数目不确定，类型任意，且长度可变的对象，JDK提供了这样的类，所有这样的类的统称————集合。 集合可分为两大类，一类是单列集合Collection，另一类是双列集合Map。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-08T15:39:05.266Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/MaDejun/MaDejun.github.io/master/photos/list.png">
+<meta property="og:updated_time" content="2018-07-09T15:51:14.364Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java 集合">
-<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;    Java中的集合是为了解决存储不同类型值，虽然数组也可以用来存储，但是存储值的类型单一。所以为了保存一些数目不确定，类型任意，且长度可变的对象，JDK提供了这样的类，所有这样的类的统称————集合。 集合可分为两大类，一类是单列集合Collection，另一类是双列集合Map。  Colletion Collection接口是集合类的根接口，Java中没有提供这个接">
+<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;    Java中的集合是为了解决存储不同类型值，虽然数组也可以用来存储，但是存储值的类型单一。所以为了保存一些数目不确定，类型任意，且长度可变的对象，JDK提供了这样的类，所有这样的类的统称————集合。 集合可分为两大类，一类是单列集合Collection，另一类是双列集合Map。">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/MaDejun/MaDejun.github.io/master/photos/list.png">
   
     <link rel="alternative" href="/atom.xml" title="MaDejun" type="application/atom+xml">
   
@@ -357,10 +359,41 @@
       
           
           
-        <p>&nbsp;&nbsp;<font color="White"><br>    Java中的集合是为了解决存储不同类型值，虽然数组也可以用来存储，但是存储值的类型单一。所以为了保存一些<strong>数目不确定，类型任意，且长度可变</strong>的对象，JDK提供了这样的类，所有这样的类的统称————<strong>集合</strong>。 集合可分为两大类，一类是单列集合<em>Collection</em>，另一类是双列集合<em>Map</em>。 </font></p>
+        <p>&nbsp;&nbsp;<font color="White"><br>    Java中的集合是为了解决存储不同类型值，虽然数组也可以用来存储，但是存储值的类型单一。所以为了保存一些<font color="lightblue"><strong>数目不确定，类型任意，且长度可变</strong></font>的对象，JDK提供了这样的类，所有这样的类的统称————<font color="lightblue"><strong>集合</strong></font>。 集合可分为两大类，<font color="lightblue">一类是单列集合<em>Collection</em>，另一类是双列集合<em>Map</em></font>。<br>    <a id="more"></a></font></p>
 <h2 id="Colletion"><a href="#Colletion" class="headerlink" title="Colletion"></a>Colletion</h2><blockquote>
-<p>Collection接口是集合类的根接口，Java中没有提供这个接口的直接的实现类。但是却因为被继承而产生了两个子接口。Set和List。</p>
-<h3 id="Set集合"><a href="#Set集合" class="headerlink" title="Set集合"></a>Set集合</h3></blockquote>
+<p>Collection接口是集合类的根接口，java中没有提供这个接口的直接的实现类。但是却因为被继承而产生了两个子接口。Set和List。 </p>
+</blockquote>
+<h3 id="Set集合"><a href="#Set集合" class="headerlink" title="Set集合"></a>Set集合</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;Set集合里面的元素可以重复，也可以是无序的。这里的无序指的是写入对象时的集合元素的顺序和你从集合中读出来的元素的顺序可能不一样。Set接口主要实现了两个类，分别是HashSet和TreeSet。</p>
+<h3 id="List集合"><a href="#List集合" class="headerlink" title="List集合"></a>List集合</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;List集合中的元素是允许重复、有序的，这里的有序指的是存入顺序和取出的顺序是一样的。而且所有元素是以一种线性的结构存储的，其实个人觉得它和数组有点类似。都可以通过索引来访问指定的元素。List继承了Collection的所有方法。在List下还有三个List接口的实现类。分别是ArrayList、LinkedList、Vector</p>
+<pre><code>List &lt;String&gt; collection =new ArrayList&lt;String&gt;();
+collection.add(&quot;TOM&quot;);//void add()直接向集合中添加元素
+collection.add(&quot;Lorry&quot;);//void add()直接向集合中添加元素
+collection.add(&quot;KangKang&quot;);//void add()直接向集合中添加元素
+collection.add(&quot;Kathy&quot;);
+collection.add(&quot;Jam&quot;);
+collection.add(&quot;TOM&quot;);//void add()直接向集合中添加元素
+System.out.println(&quot;向集合中添加元素后：&quot;+collection);
+collection.add(&quot;&quot;);
+collection.add(1,&quot;MaDeJun&quot;);//void add(int index,Object element)在指定索引处添加某元素
+System.out.println(&quot;在索引1处插入元素后：&quot;+collection);
+collection.set(0, &quot;BOB&quot;);//Object set(int index,Object element)将索引index处元素替换成element对象
+System.out.println(&quot;将0处元素替换成BOB：&quot;+collection);
+Object obj=collection.get(5);
+System.out.println(&quot;返回索引值5处的元素值：&quot;+obj);
+int index=collection.indexOf(&quot;MaDeJun&quot;);
+System.out.println(&quot;返回元素MaDeJune出现的位置：&quot;+index);
+int index1=collection.lastIndexOf(&quot;TOM&quot;);
+System.out.println(&quot;返回元素TOM最后一次出现的位置：&quot;+index1);
+List childrenlist=collection.subList(1, 4);
+System.out.println(&quot;返回从1到4处所组成的子集合：&quot;+childrenlist);
+collection.remove(&quot;Jam&quot;);
+System.out.println(&quot;删除Jam后集合：&quot;+collection);
+List&lt;String&gt; c=new ArrayList&lt;String&gt;();
+c.add(&quot;c_1&quot;);
+c.add(&quot;c_2&quot;);
+collection.addAll(c);
+System.out.println(&quot;把集合c添加到collection中后：&quot;+collection);
+</code></pre><p>&nbsp;&nbsp;<img src="https://raw.githubusercontent.com/MaDejun/MaDejun.github.io/master/photos/list.png" alt="方法运行结果"></p>
 <p></p>
 
       
@@ -374,7 +407,7 @@
         <p><span>本文标题:</span><a href="/2018/07/08/Java集合/">Java 集合</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Yolo-m 的个人博客">Yolo-m</a></p>
         <p><span>发布时间:</span>2018年07月08日 - 23时39分</p>
-        <p><span>最后更新:</span>2018年07月08日 - 23时39分</p>
+        <p><span>最后更新:</span>2018年07月09日 - 23时51分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/07/08/Java集合/" title="Java 集合">https://www.madejun.top/2018/07/08/Java集合/</a>
             <span class="copy-path" data-clipboard-text="原文: https://www.madejun.top/2018/07/08/Java集合/　　作者: Yolo-m" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -403,7 +436,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Colletion"><span class="toc-number">1.</span> <span class="toc-text">Colletion</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Set集合"><span class="toc-number">1.1.</span> <span class="toc-text">Set集合</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Colletion"><span class="toc-number">1.</span> <span class="toc-text">Colletion</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Set集合"><span class="toc-number">1.1.</span> <span class="toc-text">Set集合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#List集合"><span class="toc-number">1.2.</span> <span class="toc-text">List集合</span></a></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
