@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.madejun.top/"/>
-  <updated>2018-09-17T05:42:07.256Z</updated>
+  <updated>2018-09-17T14:16:15.545Z</updated>
   <id>https://www.madejun.top/</id>
   
   <author>
@@ -15,6 +15,66 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java设计模式之单例模式</title>
+    <link href="https://www.madejun.top/2018/09/17/JAVA%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://www.madejun.top/2018/09/17/JAVA设计模式之单例模式/</id>
+    <published>2018-09-17T14:16:14.350Z</published>
+    <updated>2018-09-17T14:16:15.545Z</updated>
+    
+    <content type="html"><![CDATA[<div align="center"><img width="100%" src="https://coding.net/u/MaDejun/p/MaDejun/git/raw/master/photos/IMG_2351.JPG"></div><p>&nbsp;&nbsp;<font color="White"></font></p><h2 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h2><h3 id="含义"><a href="#含义" class="headerlink" title="含义"></a>含义</h3><ul><li>官方说法：单例模式属于创建型模式，这种模式涉及一个单一的例，该类负责创建自己的对象，同时确保只有单个对象呗创建，这个类提供了一种访问其唯一对象的方式——全局访问点，可以直接访问，不用实例化对象</li></ul><blockquote><blockquote><p>解析：1.全局访问点实际就是一个全局变量。</p></blockquote></blockquote><a id="more"></a><ul><li>通俗说法：如果对于一个班，那么这个班只能有一个班长；在电脑里，你可以打开很多个电脑画板的窗口，但是不能打开很多个任务管理器，不管你开了多少次，它的窗口只有一个，这就是单例。</li></ul><h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ul><li>单例个类只有一个实例</li><li>该类必须自己创建自己的唯一实例</li><li>单例类必须给所有其他对象提供这一个实例，要提供给外部一个访问的节点，不能访问不到。</li></ul><p><img src="https://coding.net/u/MaDejun/p/MaDejun/git/raw/master/photos/singleton.jpg" alt="单例模式实现原理"></p><h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><blockquote><p>创建一个单例类，里面有它的<strong>私有构造函数</strong>，目的是确保用户无法通过new关键字直接实例化它，和本身的一个<strong>静态私有成员</strong>。并提供一个<strong>公有的静态工厂方法</strong>，该工厂方法负责检验实例的存在性，并实例化自己，然后存储静态成员变量，以确保只有一个实例被创建。</p></blockquote><h3 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h3><ul><li>懒汉式 </li><li>饿汉式</li><li>双检锁/双重校验锁</li><li>静态内部类</li><li>枚举<blockquote><blockquote><p>懒汉式与饿汉式的根本区别在与是否在类内方法外创建自己的对象。</p></blockquote></blockquote></li></ul><h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><ol><li><p>要求生产唯一序列号（工具类对象）</p></li><li><p>WEB 中的计数器，不用每次刷新都在数据库里加一次，用单例先缓存起来（频繁访问数据库或文件的对象）</p></li><li><p>创建的一个对象需要消耗的资源过多，比如 I/O 与数据库的连接等</p></li></ol><h3 id="内作业"><a href="#内作业" class="headerlink" title="内作业"></a>内作业</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">package cn.mdj.test;</span><br><span class="line">class SingleTon&#123;</span><br><span class="line">private static SingleTon s=null;</span><br><span class="line">private static String name;</span><br><span class="line"></span><br><span class="line">    public void setName(String name) &#123;</span><br><span class="line">this.name=name;</span><br><span class="line">&#125;</span><br><span class="line">    public String getName() &#123;</span><br><span class="line">    return name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">private SingleTon() &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public static SingleTon Factory() &#123;</span><br><span class="line">if(s==null) &#123;</span><br><span class="line">s=new SingleTon();</span><br><span class="line">&#125;</span><br><span class="line">return s;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">public  class SingleTest &#123;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">// TODO Auto-generated method stub</span><br><span class="line">   SingleTon st=SingleTon.Factory();</span><br><span class="line">   st.setName(&quot;大三&quot;);</span><br><span class="line">   System.out.println(st.getName()+&quot;已经是我们班班长了&quot;);</span><br><span class="line">   SingleTon st1=SingleTon.Factory();</span><br><span class="line">   st1.setName(&quot;大四&quot;);</span><br><span class="line">   if(st1.equals(st)) &#123;</span><br><span class="line">   System.out.println(&quot;已经有班长了，不能够让&quot;+st1.getName()+&quot;重复产生班长&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><pre><code>&lt;/font&gt;。 </code></pre><h2 id="还在学习中，未完待续"><a href="#还在学习中，未完待续" class="headerlink" title="还在学习中，未完待续"></a>还在学习中，未完待续</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div align=&quot;center&quot;&gt;&lt;img width=&quot;100%&quot; src=&quot;https://coding.net/u/MaDejun/p/MaDejun/git/raw/master/photos/IMG_2351.JPG&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&lt;font color=&quot;White&quot;&gt;&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;单例模式&quot;&gt;&lt;a href=&quot;#单例模式&quot; class=&quot;headerlink&quot; title=&quot;单例模式&quot;&gt;&lt;/a&gt;单例模式&lt;/h2&gt;&lt;h3 id=&quot;含义&quot;&gt;&lt;a href=&quot;#含义&quot; class=&quot;headerlink&quot; title=&quot;含义&quot;&gt;&lt;/a&gt;含义&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;官方说法：单例模式属于创建型模式，这种模式涉及一个单一的例，该类负责创建自己的对象，同时确保只有单个对象呗创建，这个类提供了一种访问其唯一对象的方式——全局访问点，可以直接访问，不用实例化对象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;解析：1.全局访问点实际就是一个全局变量。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://www.madejun.top/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java设计模式之单例模式</title>
+    <link href="https://www.madejun.top/2018/09/17/%E8%8E%AB%E6%96%AFJAVA%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://www.madejun.top/2018/09/17/莫斯JAVA设计模式之单例模式/</id>
+    <published>2018-09-17T13:23:26.578Z</published>
+    <updated>2018-09-17T14:15:41.029Z</updated>
+    
+    <content type="html"><![CDATA[<div align="center"><img width="100%" src="https://coding.net/u/MaDejun/p/MaDejun/git/raw/master/photos/IMG_2351.JPG"></div><p>&nbsp;&nbsp;<font color="White"></font></p><h2 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h2><h3 id="含义"><a href="#含义" class="headerlink" title="含义"></a>含义</h3><ul><li>官方说法：单例模式属于创建型模式，这种模式涉及一个单一的例，该类负责创建自己的对象，同时确保只有单个对象呗创建，这个类提供了一种访问其唯一对象的方式——全局访问点，可以直接访问，不用实例化对象</li></ul><blockquote><blockquote><p>解析：1.全局访问点实际就是一个全局变量。</p></blockquote></blockquote><a id="more"></a><ul><li>通俗说法：如果对于一个班，那么这个班只能有一个班长；在电脑里，你可以打开很多个电脑画板的窗口，但是不能打开很多个任务管理器，不管你开了多少次，它的窗口只有一个，这就是单例。</li></ul><h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ul><li>单例个类只有一个实例</li><li>该类必须自己创建自己的唯一实例</li><li>单例类必须给所有其他对象提供这一个实例，要提供给外部一个访问的节点，不能访问不到。</li></ul><p><img src="https://coding.net/u/MaDejun/p/MaDejun/git/raw/master/photos/singleton.jpg" alt="单例模式实现原理"></p><h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><blockquote><p>创建一个单例类，里面有它的<strong>私有构造函数</strong>，目的是确保用户无法通过new关键字直接实例化它，和本身的一个<strong>静态私有成员</strong>。并提供一个<strong>公有的静态工厂方法</strong>，该工厂方法负责检验实例的存在性，并实例化自己，然后存储静态成员变量，以确保只有一个实例被创建。</p></blockquote><h3 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h3><ul><li>懒汉式 </li><li>饿汉式</li><li>双检锁/双重校验锁</li><li>静态内部类</li><li>枚举<blockquote><blockquote><p>懒汉式与饿汉式的根本区别在与是否在类内方法外创建自己的对象。</p></blockquote></blockquote></li></ul><h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><ol><li><p>要求生产唯一序列号（工具类对象）</p></li><li><p>WEB 中的计数器，不用每次刷新都在数据库里加一次，用单例先缓存起来（频繁访问数据库或文件的对象）</p></li><li><p>创建的一个对象需要消耗的资源过多，比如 I/O 与数据库的连接等</p></li></ol><h3 id="内作业"><a href="#内作业" class="headerlink" title="内作业"></a>内作业</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">package cn.mdj.test;</span><br><span class="line">class SingleTon&#123;</span><br><span class="line">private static SingleTon s=null;</span><br><span class="line">private static String name;</span><br><span class="line"></span><br><span class="line">    public void setName(String name) &#123;</span><br><span class="line">this.name=name;</span><br><span class="line">&#125;</span><br><span class="line">    public String getName() &#123;</span><br><span class="line">    return name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">private SingleTon() &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public static SingleTon Factory() &#123;</span><br><span class="line">if(s==null) &#123;</span><br><span class="line">s=new SingleTon();</span><br><span class="line">&#125;</span><br><span class="line">return s;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">public  class SingleTest &#123;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">// TODO Auto-generated method stub</span><br><span class="line">   SingleTon st=SingleTon.Factory();</span><br><span class="line">   st.setName(&quot;大三&quot;);</span><br><span class="line">   System.out.println(st.getName()+&quot;已经是我们班班长了&quot;);</span><br><span class="line">   SingleTon st1=SingleTon.Factory();</span><br><span class="line">   st1.setName(&quot;大四&quot;);</span><br><span class="line">   if(st1.equals(st)) &#123;</span><br><span class="line">   System.out.println(&quot;已经有班长了，不能够让&quot;+st1.getName()+&quot;重复产生班长&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><pre><code>&lt;/font&gt;。 </code></pre><h2 id="还在学习中，未完待续"><a href="#还在学习中，未完待续" class="headerlink" title="还在学习中，未完待续"></a>还在学习中，未完待续</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div align=&quot;center&quot;&gt;&lt;img width=&quot;100%&quot; src=&quot;https://coding.net/u/MaDejun/p/MaDejun/git/raw/master/photos/IMG_2351.JPG&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&lt;font color=&quot;White&quot;&gt;&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;单例模式&quot;&gt;&lt;a href=&quot;#单例模式&quot; class=&quot;headerlink&quot; title=&quot;单例模式&quot;&gt;&lt;/a&gt;单例模式&lt;/h2&gt;&lt;h3 id=&quot;含义&quot;&gt;&lt;a href=&quot;#含义&quot; class=&quot;headerlink&quot; title=&quot;含义&quot;&gt;&lt;/a&gt;含义&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;官方说法：单例模式属于创建型模式，这种模式涉及一个单一的例，该类负责创建自己的对象，同时确保只有单个对象呗创建，这个类提供了一种访问其唯一对象的方式——全局访问点，可以直接访问，不用实例化对象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;解析：1.全局访问点实际就是一个全局变量。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://www.madejun.top/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>Java 反射机制</title>
