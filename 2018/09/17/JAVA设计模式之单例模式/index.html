@@ -15,7 +15,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://coding.net/u/MaDejun/p/MaDejun/git/raw/master/photos/IMG_2351.JPG">
 <meta property="og:image" content="https://coding.net/u/MaDejun/p/MaDejun/git/raw/master/photos/singleton.jpg">
-<meta property="og:updated_time" content="2018-09-17T14:16:15.545Z">
+<meta property="og:updated_time" content="2018-09-17T14:31:32.905Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java设计模式之单例模式">
 <meta name="twitter:description" content="&amp;nbsp;&amp;nbsp; 单例模式含义 官方说法：单例模式属于创建型模式，这种模式涉及一个单一的例，该类负责创建自己的对象，同时确保只有单个对象呗创建，这个类提供了一种访问其唯一对象的方式——全局访问点，可以直接访问，不用实例化对象    解析：1.全局访问点实际就是一个全局变量。">
@@ -405,8 +405,7 @@
 </li>
 </ol>
 <h3 id="内作业"><a href="#内作业" class="headerlink" title="内作业"></a>内作业</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">package cn.mdj.test;</span><br><span class="line">class SingleTon&#123;</span><br><span class="line">	private static SingleTon s=null;</span><br><span class="line">	private static String name;</span><br><span class="line"></span><br><span class="line">    public void setName(String name) &#123;</span><br><span class="line">		this.name=name;</span><br><span class="line">	&#125;</span><br><span class="line">    public String getName() &#123;</span><br><span class="line">    	return name;</span><br><span class="line">    &#125;</span><br><span class="line">		</span><br><span class="line">	private SingleTon() &#123;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public static SingleTon Factory() &#123;</span><br><span class="line">		if(s==null) &#123;</span><br><span class="line">			s=new SingleTon();</span><br><span class="line">		&#125;</span><br><span class="line">		return s;		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public  class SingleTest &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		// TODO Auto-generated method stub		</span><br><span class="line">   SingleTon st=SingleTon.Factory();</span><br><span class="line">   st.setName(&quot;大三&quot;);</span><br><span class="line">   System.out.println(st.getName()+&quot;已经是我们班班长了&quot;);</span><br><span class="line">   SingleTon st1=SingleTon.Factory();</span><br><span class="line">   st1.setName(&quot;大四&quot;);</span><br><span class="line">   if(st1.equals(st)) &#123;</span><br><span class="line">	   System.out.println(&quot;已经有班长了，不能够让&quot;+st1.getName()+&quot;重复产生班长&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">   	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<pre><code>&lt;/font&gt;。 
-</code></pre><h2 id="还在学习中，未完待续"><a href="#还在学习中，未完待续" class="headerlink" title="还在学习中，未完待续"></a>还在学习中，未完待续</h2>
+<h2 id="还在学习中，未完待续"><a href="#还在学习中，未完待续" class="headerlink" title="还在学习中，未完待续"></a>还在学习中，未完待续</h2>
       
       
     </div>
@@ -418,7 +417,7 @@
         <p><span>本文标题:</span><a href="/2018/09/17/JAVA设计模式之单例模式/">Java设计模式之单例模式</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Yolo-m 的个人博客">Yolo-m</a></p>
         <p><span>发布时间:</span>2018年09月17日 - 22时16分</p>
-        <p><span>最后更新:</span>2018年09月17日 - 22时16分</p>
+        <p><span>最后更新:</span>2018年09月17日 - 22时31分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/09/17/JAVA设计模式之单例模式/" title="Java设计模式之单例模式">https://www.madejun.top/2018/09/17/JAVA设计模式之单例模式/</a>
             <span class="copy-path" data-clipboard-text="原文: https://www.madejun.top/2018/09/17/JAVA设计模式之单例模式/　　作者: Yolo-m" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
