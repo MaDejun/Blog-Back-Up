@@ -3,27 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo日常折腾—添加相册功能 | MaDejun</title>
+  <title>关于compareTo(T o)方法的疑问 | MaDejun</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="虽然搭建博客主要是为了记录自己兴趣爱好的学习经验和偶尔的日常小生活，但有个相册的功能也没有多大的违背搭建博客的初愿。  效果: 看这里说明:如果你会前端，可以自行改一下样式。">
-<meta name="keywords" content="hexo">
+  <meta name="description" content="关于compareTo(T o)方法中的疑问1. 疑问提出：在学习Comparable接口时，试了试书上的一个案例，案例要求是设计一个学生类，在此类中包含了姓名，年龄，成绩，并产生了一个对象数组，要求按成绩由高到低排序，若成绩相等，则按照年龄由低到高排序。解决这个问题的方法是借用Arrays类中的sort()方法进行排序操作。为了让排序满足题目要求，题目实现重写了compareTo()方法，那么在">
+<meta name="keywords" content="Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo日常折腾—添加相册功能">
-<meta property="og:url" content="https://www.madejun.top/2017/11/20/Hexo日常折腾—添加相册功能/index.html">
+<meta property="og:title" content="关于compareTo(T o)方法的疑问">
+<meta property="og:url" content="https://www.madejun.top/2020/01/11/关于compareTo(T o)方法的疑问/index.html">
 <meta property="og:site_name" content="MaDejun">
-<meta property="og:description" content="虽然搭建博客主要是为了记录自己兴趣爱好的学习经验和偶尔的日常小生活，但有个相册的功能也没有多大的违背搭建博客的初愿。  效果: 看这里说明:如果你会前端，可以自行改一下样式。">
+<meta property="og:description" content="关于compareTo(T o)方法中的疑问1. 疑问提出：在学习Comparable接口时，试了试书上的一个案例，案例要求是设计一个学生类，在此类中包含了姓名，年龄，成绩，并产生了一个对象数组，要求按成绩由高到低排序，若成绩相等，则按照年龄由低到高排序。解决这个问题的方法是借用Arrays类中的sort()方法进行排序操作。为了让排序满足题目要求，题目实现重写了compareTo()方法，那么在">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://raw.githubusercontent.com/MaDejun/MaDejun.github.io/master/photos/IMG_2327.JPG">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3709167-ca59dcea4fe5b7b2.jpg">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3709167-db7ea608d983e27e.jpg">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3709167-457ebfda1c25aa61.jpg">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3709167-4bab308a9ede818a.jpg">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3709167-7b2fc4778b9aed09.jpg">
-<meta property="og:updated_time" content="2018-09-17T05:19:23.864Z">
+<meta property="og:updated_time" content="2020-01-10T16:19:03.120Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo日常折腾—添加相册功能">
-<meta name="twitter:description" content="虽然搭建博客主要是为了记录自己兴趣爱好的学习经验和偶尔的日常小生活，但有个相册的功能也没有多大的违背搭建博客的初愿。  效果: 看这里说明:如果你会前端，可以自行改一下样式。">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/MaDejun/MaDejun.github.io/master/photos/IMG_2327.JPG">
+<meta name="twitter:title" content="关于compareTo(T o)方法的疑问">
+<meta name="twitter:description" content="关于compareTo(T o)方法中的疑问1. 疑问提出：在学习Comparable接口时，试了试书上的一个案例，案例要求是设计一个学生类，在此类中包含了姓名，年龄，成绩，并产生了一个对象数组，要求按成绩由高到低排序，若成绩相等，则按照年龄由低到高排序。解决这个问题的方法是借用Arrays类中的sort()方法进行排序操作。为了让排序满足题目要求，题目实现重写了compareTo()方法，那么在">
   
     <link rel="alternative" href="/atom.xml" title="MaDejun" type="application/atom+xml">
   
@@ -318,11 +311,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-Hexo日常折腾—添加相册功能" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-关于compareTo(T o)方法的疑问" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/11/20/Hexo日常折腾—添加相册功能/" class="article-date">
-      <time datetime="2017-11-20T12:00:00.000Z" itemprop="datePublished">2017-11-20</time>
+      <a href="/2020/01/11/关于compareTo(T o)方法的疑问/" class="article-date">
+      <time datetime="2020-01-10T16:18:23.000Z" itemprop="datePublished">2020-01-11</time>
 </a>
     </div>
   
@@ -339,7 +332,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hexo日常折腾—添加相册功能
+      关于compareTo(T o)方法的疑问
     </h1>
   
 
@@ -355,7 +348,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
     </div>
 
 
@@ -368,26 +361,8 @@
       
           
           
-        <div align="center"><img width="100%" src="https://raw.githubusercontent.com/MaDejun/MaDejun.github.io/master/photos/IMG_2327.JPG"></div>
-
-<blockquote>
-<p>虽然搭建博客主要是为了记录自己兴趣爱好的学习经验和偶尔的日常小生活，但有个相册的功能也没有多大的违背搭建博客的初愿。</p>
-</blockquote>
-<p>效果: <a href="http://www.madejun.top/photos">看这里</a><br>说明:如果你会前端，可以自行改一下样式。<br><a id="more"></a></p>
-<h1 id="功能实现"><a href="#功能实现" class="headerlink" title="功能实现"></a>功能实现</h1><p>1.首先你要找一个可以存储图片的地方，如果你用github，最好新建一个仓库用于存储图片，可以访问到的。不要在博客的仓库上存储，这样会拖累它的速度的。例如我新建的仓库名叫Blog-Back-Up,当然你也可以用七牛<br><img src="http://upload-images.jianshu.io/upload_images/3709167-ca59dcea4fe5b7b2.jpg" alt=""></p>
-<p>2.要生成photos.html来展示自己的图片。也要向这个页面提供图片的数据，这些数据的来源就需要一些文件来生成一个.json (里面有图片的信息)文件。</p>
-<blockquote>
-<p>2.1本地目录里的设置 </p>
-</blockquote>
-<p>2.1.1 进入到你的博客目录下生成photos页面 执行”hexo new page “photos” “<br><img src="http://upload-images.jianshu.io/upload_images/3709167-db7ea608d983e27e.jpg" alt="图片发自简书App"></p>
-<p>2.1.2 可以在<a href="https://github.com/lawlite19/Blog-Back-Up/tree/master/blog_photos_copy" target="_blank" rel="noopener">lawlite 19</a>这里下载样式文件，将这些文件放到你刚刚新建的/source/photos文件夹里。<br><img src="http://upload-images.jianshu.io/upload_images/3709167-457ebfda1c25aa61.jpg" alt=""></p>
-<p>然后在博客的根目录下新建photos和min_photos两个文件夹，photos用来存放你要上传的照片，min_photos文件夹不需要你去处理什么 里面会在你执行脚本的时候自动将处理后的图片放进去。</p>
-<p>修改ins.js文件里面的rend函数下的url<br><img src="http://upload-images.jianshu.io/upload_images/3709167-4bab308a9ede818a.jpg" alt=""><br><strong>前面一定是raw.githubusercontent.com</strong></p>
-<p>2.1.3 这一步就该处理图片了，处理图片所用到的<strong>python脚本文件</strong>你可以到<a href="https://github.com/lawlite19/Blog-Back-Up" target="_blank" rel="noopener">这里</a>下载</p>
-<p>下载后放到你的博客根目录下，将你要上传的图片放到photos文件夹里，并且将图片重命名为一下格式<br><strong>最前面是日期，然后用下划线进行分隔<br>后面是图片的描述信息，注意不要包含_和.符号</strong><br><img src="http://upload-images.jianshu.io/upload_images/3709167-7b2fc4778b9aed09.jpg" alt=""></p>
-<p>通过命令窗口进入到tool.py所在的目录执行tool.py脚本，执行结束后，你就会在/source/photos文件里看到一个data.json文件。</p>
-<p>最后</p>
-<p>hexo g<br>hexo s<br>预览一下 成功后就可以hexo d部署到博客上了</p>
+        <h1 id="关于compareTo-T-o-方法中的疑问"><a href="#关于compareTo-T-o-方法中的疑问" class="headerlink" title="关于compareTo(T o)方法中的疑问"></a>关于compareTo(T o)方法中的疑问</h1><h2 id="1-疑问提出：在学习Comparable接口时，试了试书上的一个案例，案例要求是设计一个学生类，在此类中包含了姓名，年龄，成绩，并产生了一个对象数组，要求按成绩由高到低排序，若成绩相等，则按照年龄由低到高排序。解决这个问题的方法是借用Arrays类中的sort-方法进行排序操作。为了让排序满足题目要求，题目实现重写了compareTo-方法，那么在这个题目中，compareTo-Student-stu-是怎么比较的呢？-在这个方法体中的this-age不是指的当前对象的age吗？那它不应该和stu-age一样吗？compareTo方法的比较用的是什么算法？"><a href="#1-疑问提出：在学习Comparable接口时，试了试书上的一个案例，案例要求是设计一个学生类，在此类中包含了姓名，年龄，成绩，并产生了一个对象数组，要求按成绩由高到低排序，若成绩相等，则按照年龄由低到高排序。解决这个问题的方法是借用Arrays类中的sort-方法进行排序操作。为了让排序满足题目要求，题目实现重写了compareTo-方法，那么在这个题目中，compareTo-Student-stu-是怎么比较的呢？-在这个方法体中的this-age不是指的当前对象的age吗？那它不应该和stu-age一样吗？compareTo方法的比较用的是什么算法？" class="headerlink" title="1. 疑问提出：在学习Comparable接口时，试了试书上的一个案例，案例要求是设计一个学生类，在此类中包含了姓名，年龄，成绩，并产生了一个对象数组，要求按成绩由高到低排序，若成绩相等，则按照年龄由低到高排序。解决这个问题的方法是借用Arrays类中的sort()方法进行排序操作。为了让排序满足题目要求，题目实现重写了compareTo()方法，那么在这个题目中，compareTo(Student stu)是怎么比较的呢？ 在这个方法体中的this.age不是指的当前对象的age吗？那它不应该和stu.age一样吗？compareTo方法的比较用的是什么算法？"></a>1. 疑问提出：在学习Comparable接口时，试了试书上的一个案例，案例要求是设计一个学生类，在此类中包含了姓名，年龄，成绩，并产生了一个对象数组，要求按成绩由高到低排序，若成绩相等，则按照年龄由低到高排序。解决这个问题的方法是借用Arrays类中的sort()方法进行排序操作。为了让排序满足题目要求，题目实现重写了compareTo()方法，那么在这个题目中，compareTo(Student stu)是怎么比较的呢？ 在这个方法体中的this.age不是指的当前对象的age吗？那它不应该和stu.age一样吗？compareTo方法的比较用的是什么算法？</h2><hr>
+<p> <strong>相关代码</strong>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">package cn.m.demo;</span><br><span class="line">import java.util.Arrays;</span><br><span class="line">import java.util.Comparator;</span><br><span class="line">import java.util.function.Consumer;</span><br><span class="line"></span><br><span class="line">class Student implements Comparable&lt;Student&gt;&#123;</span><br><span class="line">   private int age;</span><br><span class="line">   private String name;</span><br><span class="line">   private float score;</span><br><span class="line">   public Student(String name,int age,float score) &#123;</span><br><span class="line">	   this.name=name;</span><br><span class="line">	   this.age =age;</span><br><span class="line">	   this.score=score;</span><br><span class="line">   &#125;</span><br><span class="line">   public String toString() &#123;</span><br><span class="line">	   return this.name+&quot;\t\t&quot;+this.age+&quot;\t\t&quot;+this.score;</span><br><span class="line">   &#125;</span><br><span class="line">	@Override</span><br><span class="line">	public int compareTo(Student stu) &#123;</span><br><span class="line">		if(stu.score&gt;score) &#123;</span><br><span class="line">			return 1;</span><br><span class="line">		&#125;else if(stu.score&lt;this.score) &#123;</span><br><span class="line">			return -1;</span><br><span class="line">		&#125;else &#123;</span><br><span class="line">			if(stu.age&gt;this.age) &#123;</span><br><span class="line">				return 1;</span><br><span class="line">			&#125;else if(stu.age&lt;this.age) &#123;</span><br><span class="line">				return -1;</span><br><span class="line">			&#125;else &#123;</span><br><span class="line">				return 0;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line">public class ArrayList1  &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">	  Student[] student = new Student[]&#123;new Student(&quot;张三&quot;,17,70),</span><br><span class="line">	                      new Student(&quot;李四&quot;,16,90),</span><br><span class="line">			              new Student(&quot;王二&quot;,20,65)&#125;;</span><br><span class="line">	  Arrays.sort(student);</span><br><span class="line">	  for(int i =0;i&lt;student.length;i++) &#123;</span><br><span class="line">		  System.out.println(student[i]);</span><br><span class="line">	  &#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
       
@@ -397,13 +372,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/11/20/Hexo日常折腾—添加相册功能/">Hexo日常折腾—添加相册功能</a></p>
+        <p><span>本文标题:</span><a href="/2020/01/11/关于compareTo(T o)方法的疑问/">关于compareTo(T o)方法的疑问</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Yolo-m 的个人博客">Yolo-m</a></p>
-        <p><span>发布时间:</span>2017年11月20日 - 20时00分</p>
-        <p><span>最后更新:</span>2018年09月17日 - 13时19分</p>
+        <p><span>发布时间:</span>2020年01月11日 - 00时18分</p>
+        <p><span>最后更新:</span>2020年01月11日 - 00时19分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/11/20/Hexo日常折腾—添加相册功能/" title="Hexo日常折腾—添加相册功能">https://www.madejun.top/2017/11/20/Hexo日常折腾—添加相册功能/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://www.madejun.top/2017/11/20/Hexo日常折腾—添加相册功能/　　作者: Yolo-m" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2020/01/11/关于compareTo(T o)方法的疑问/" title="关于compareTo(T o)方法的疑问">https://www.madejun.top/2020/01/11/关于compareTo(T o)方法的疑问/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://www.madejun.top/2020/01/11/关于compareTo(T o)方法的疑问/　　作者: Yolo-m" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -416,18 +391,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2018/07/08/Java集合/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Java 集合
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/11/20/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">冬</div>
+    <a href="/2018/09/17/JAVA设计模式之单例模式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java设计模式之单例模式</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -438,7 +404,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#功能实现"><span class="toc-number">1.</span> <span class="toc-text">功能实现</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#关于compareTo-T-o-方法中的疑问"><span class="toc-number">1.</span> <span class="toc-text">关于compareTo(T o)方法中的疑问</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-疑问提出：在学习Comparable接口时，试了试书上的一个案例，案例要求是设计一个学生类，在此类中包含了姓名，年龄，成绩，并产生了一个对象数组，要求按成绩由高到低排序，若成绩相等，则按照年龄由低到高排序。解决这个问题的方法是借用Arrays类中的sort-方法进行排序操作。为了让排序满足题目要求，题目实现重写了compareTo-方法，那么在这个题目中，compareTo-Student-stu-是怎么比较的呢？-在这个方法体中的this-age不是指的当前对象的age吗？那它不应该和stu-age一样吗？compareTo方法的比较用的是什么算法？"><span class="toc-number">1.1.</span> <span class="toc-text">1. 疑问提出：在学习Comparable接口时，试了试书上的一个案例，案例要求是设计一个学生类，在此类中包含了姓名，年龄，成绩，并产生了一个对象数组，要求按成绩由高到低排序，若成绩相等，则按照年龄由低到高排序。解决这个问题的方法是借用Arrays类中的sort()方法进行排序操作。为了让排序满足题目要求，题目实现重写了compareTo()方法，那么在这个题目中，compareTo(Student stu)是怎么比较的呢？ 在这个方法体中的this.age不是指的当前对象的age吗？那它不应该和stu.age一样吗？compareTo方法的比较用的是什么算法？</span></a></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -487,7 +453,7 @@
       
    
 <section id="comments">
-<div id="SOHUCS" sid="Hexo日常折腾—添加相册功能"></div> 
+<div id="SOHUCS" sid="关于compareTo(T o)方法的疑问"></div> 
 <script type="text/javascript"> 
 (function(){ 
 var appid = 'cytgVQmzb'; 
@@ -502,13 +468,11 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/07/08/Java集合/" title="上一篇: Java 集合">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2017/11/20/hello-world/" title="下一篇: 冬">
+            <a href="/2018/09/17/JAVA设计模式之单例模式/" title="下一篇: Java设计模式之单例模式">
                 <i class="fa fa-angle-right"></i>
             </a>
         
